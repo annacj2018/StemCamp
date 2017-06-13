@@ -8,9 +8,9 @@
 
 int main()                                    
 {
-  int  x=28;
+  int  x=1;
  
-  while(x < 128)
+  while(x < 11)
   { 
     print("%d\n", x);
     x = x + 1 ;
