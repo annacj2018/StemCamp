@@ -13,6 +13,7 @@ int main()
   int interval ;
   float Score = 0;
   int rounds = 0;
+  int Best = 1500;
   
   srand(CNT);
   
@@ -51,11 +52,16 @@ int main()
   
   if (TimeCounter > 0 )
   {
+   
    Score = Score + TimeCounter ;
    rounds = rounds + 1;
   print(" Your time was %d ms.\n", TimeCounter);
-  
   }  
+  
+  if (TimeCounter < Best)
+  ( Best = TimeCounter);
+  
+  
    else   
   {
     print("You've let go of the button before time. Try ,try , again! \n");
@@ -67,6 +73,7 @@ int main()
   } 
   Score = Score / rounds;
   print( "Farwell my friend! Your Score was: %0.2f ms. \n" , Score);
+  print( "Your best time was %d ms. \n", Best);
   
   return 0;
    
