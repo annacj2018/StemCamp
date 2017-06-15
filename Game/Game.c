@@ -51,9 +51,10 @@ int main()
   
   if (TimeCounter > 0 )
   {
-  print(" Your time was %d ms.\n", TimeCounter);
    Score = Score + TimeCounter ;
    rounds = rounds + 1;
+  print(" Your time was %d ms.\n", TimeCounter);
+  
   }  
    else   
   {
@@ -65,9 +66,8 @@ int main()
   //end of while loop for play again
   } 
   Score = Score / rounds;
-  print( "Farwell my friend! Your Score was: %0.2f ms.\n");
+  print( "Farwell my friend! Your Score was: %0.2f ms. \n" , Score);
   
   return 0;
    
 }
-
