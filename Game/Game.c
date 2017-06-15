@@ -26,7 +26,7 @@ int main()
   { 
   print("Press and hold the button to start!");
   
-  while (input(8) == 1)
+  while (input(8) == 0)
   { 
   //Intentional empty brackets// 
   } 
@@ -34,14 +34,14 @@ int main()
   high(0);
   low(1) ;
   
-  interval = (rand() %1001) + 500 ;
+  interval = (rand() % 1001) + 500 ;
   pause(interval); 
   
  low(0);
   high(1);
   
   TimeCounter = 0;
-  while (input(0) == 1 )
+  while (input(8) == 1 )
   
   { 
   pause(1);
