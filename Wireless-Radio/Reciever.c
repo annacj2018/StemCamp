@@ -23,7 +23,7 @@ int main()
  }
  print("\n");
     
- 
+   
  //open a serial connection to the xbee radio//
  xbee = fdserial_open(0,1,0,9600);
  init_radio(xbee);
@@ -36,6 +36,8 @@ int main()
  
  
  
+ 
+ 
 
  //get a character from the radio and print it on the screen
  
@@ -43,7 +45,8 @@ while(1)
   {
     c = fdserial_rxChar(xbee);
     if (c !=255)
-    { print("%c%", c);
+    { 
+    print("%c%", c);
     }     
   }  
 }
@@ -52,8 +55,8 @@ void init_radio(fdserial *radio)
 {
   const char channel= 'B'; //0x0 to 0x1A, must match your partner
   const char PAN_ID[] = "AAAA"; // 0x0 to 0xFFFF, Must match your partner
-  const char DEST_ID[] ="0001"; //0x0 to 0xFFFF ,Must be your partner's SRC_ID
-  const char SRC_ID[] = "0002"; //0x0 to 0xFFFF, must be your partner's DEST_ID\
+  const char DEST_ID[] ="0002"; //0x0 to 0xFFFF ,Must be your partner's SRC_ID
+  const char SRC_ID[] = "0001"; //0x0 to 0xFFFF, must be your partner's DEST_ID\
   
   char result[32] = {0};
   
